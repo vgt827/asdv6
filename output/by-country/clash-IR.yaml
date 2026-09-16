@@ -4,27 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇳 CN 01 - xiaohe
-  type: vmess
-  server: 36.134.35.36
-  port: 50011
-  uuid: 9195e0f1-f466-4e69-838f-a95519b5d45e
-  alterId: 0
-  cipher: auto
+- name: 🇮🇷 IR 01 - xiaohe
+  type: ss
+  server: e2.cover20.ir
+  port: 30874
+  cipher: chacha20-ietf-poly1305
+  password: 6klqR8ozFYhzL59i8UlHB3pqy74W8tKiZ3fUHrmF0H0=
   udp: true
-  tls: false
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇳 CN 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇳 CN 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 rules:
 - MATCH,PROXIES
