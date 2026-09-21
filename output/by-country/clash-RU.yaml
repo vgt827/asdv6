@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: 188.166.49.168
+  server: 64.225.110.247
   port: 2083
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
@@ -20,8 +20,8 @@ proxies:
       Host: cdn8848.776676.xyz
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
-  server: 144.31.28.106
-  port: 8443
+  server: 188.130.207.30
+  port: 2053
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
@@ -29,7 +29,7 @@ proxies:
   servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /trade
+    path: /
     headers:
       Host: cdn8848.776676.xyz
 proxy-groups:
