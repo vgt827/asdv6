@@ -16,7 +16,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: m.zoom.us
+      Host: cloud.ghostdev.lk
 - name: 🇱🇰 LK 02 - xiaohe
   type: vless
   server: cdn.zoom.us
