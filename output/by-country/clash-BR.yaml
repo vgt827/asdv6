@@ -4,31 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇪 SE 01 - xiaohe
-  type: vless
-  server: 94.143.231.146
+- name: 🇧🇷 BR 01 - xiaohe
+  type: vmess
+  server: aksai.org
   port: 443
-  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: sub.merky.top
+  servername: aksai.org
   network: ws
   ws-opts:
-    path: /merky-connect/de6/
+    path: /linkvws
     headers:
-      Host: sub.merky.top
+      Host: aksai.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇪 SE 01 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪 SE 01 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
 rules:
 - MATCH,PROXIES
