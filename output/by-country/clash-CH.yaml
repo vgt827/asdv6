@@ -27,7 +27,7 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🇨🇭 CH 03 - xiaohe
   type: vless
   server: 208.69.78.217
@@ -63,7 +63,33 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: 🇨🇭 CH 06 - xiaohe
+  type: vless
+  server: 208.69.78.217
+  port: 2053
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇨🇭 CH 07 - xiaohe
+  type: vless
+  server: 147.45.42.73
+  port: 20443
+  uuid: f293db4d-7ab1-4faf-bb15-89540d8709cb
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -74,6 +100,8 @@ proxy-groups:
   - 🇨🇭 CH 03 - xiaohe
   - 🇨🇭 CH 04 - xiaohe
   - 🇨🇭 CH 05 - xiaohe
+  - 🇨🇭 CH 06 - xiaohe
+  - 🇨🇭 CH 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -84,5 +112,7 @@ proxy-groups:
   - 🇨🇭 CH 03 - xiaohe
   - 🇨🇭 CH 04 - xiaohe
   - 🇨🇭 CH 05 - xiaohe
+  - 🇨🇭 CH 06 - xiaohe
+  - 🇨🇭 CH 07 - xiaohe
 rules:
 - MATCH,PROXIES
